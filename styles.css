@@ -1,0 +1,172 @@
+/* Mengatur header agar menyatu dengan navbar */
+.header-custom {
+    height: 450px; /* Sesuaikan tinggi header */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-bottom: 0; /* Hilangkan margin bawah */
+    padding-bottom: 0; /* Tambahan untuk hilangkan ruang antara header dan navbar */
+}
+
+/* Gambar slideshow sebagai background header */
+.carousel-inner img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Mengatur teks selamat datang di tengah header */
+.welcome-text {
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Menambahkan bayangan pada teks untuk meningkatkan keterbacaan */
+}
+
+/* Integrasi Navigation Bar yang dipindahkan */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.826); /* Background hitam dengan opacity 82.6% */
+    padding: 10px 0; /* Menambahkan sedikit padding untuk kenyamanan */
+    border: none; /* Hapus border untuk tampilan yang lebih bersih */
+    position: relative; /* Pastikan navbar tetap berada di bawah header */
+    width: 100%;
+    z-index: 2; /* Tetapkan z-index lebih rendah daripada header content */
+    backdrop-filter: blur(5px); /* Menambahkan efek blur pada background untuk tampilan lebih elegan */
+}
+
+/* Pusatkan navigation bar */
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Pusatkan item menu */
+    width: 100%; /* Pastikan navbar memenuhi lebar penuh container */
+}
+
+/* Mengatur warna teks dan shadow pada navigation bar */
+.navbar-nav .nav-link {
+    color: #ffffff; /* Ubah warna teks menjadi putih */
+    font-weight: bold; /* Menambahkan ketebalan pada teks */
+    font-size: 1.1rem; /* Menambah ukuran teks */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Mengurangi bayangan teks untuk tampilan lebih halus */
+}
+
+/* Mengatur warna teks saat hover */
+.navbar-nav .nav-link:hover {
+    color: #ffcc00; /* Ubah warna teks saat hover untuk meningkatkan keterbacaan */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel {
+    z-index: 0;
+}
+
+.carousel-caption {
+    z-index: 3;
+    color: white;
+}
+
+/* Ukuran Peta Custom */
+.custom-map-container iframe {
+    width: 30%;
+    height: 350px;
+    border-radius: 10px; /* Optional: menambahkan border-radius untuk sudut melengkung */
+}
+
+/* Cuaca Harian Section */
+#cuaca-harian .carousel-control-prev,
+#cuaca-harian .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    background: none;
+}
+
+#cuaca-harian .carousel-control-prev {
+    left: -50px; /* Adjust the left position */
+}
+
+#cuaca-harian .carousel-control-next {
+    right: -50px; /* Adjust the right position */
+}
+
+/* Infografis Rekapitulasi Bencana Section */
+#infografis .carousel-control-prev,
+#infografis .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    background: none;
+}
+
+#infografis .carousel-control-prev {
+    left: -50px; /* Adjust the left position */
+}
+
+#infografis .carousel-control-next {
+    right: -50px; /* Adjust the right position */
+}
+
+/* Mengatur opacity untuk gambar infografis */
+#infografis .carousel-inner img {
+    opacity: 1; /* Set opacity to 100% */
+}
+
+/* Mengatur teks nama bulan agar terlihat lebih jelas */
+#infografis .carousel-item p {
+    color: #ffffff; /* Ubah warna teks menjadi putih */
+    font-weight: bold; /* Menambahkan ketebalan pada teks */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Menambahkan bayangan pada teks untuk meningkatkan keterbacaan */
+    margin-top: 10px; /* Menambahkan sedikit ruang di atas teks */
+}
+
+/* Background putih transparan blur untuk item Cuaca Harian */
+#cuaca-harian .card {
+    background-color: rgba(255, 255, 255, 0.6); /* Background putih dengan transparansi 60% */
+    backdrop-filter: blur(10px); /* Efek blur pada background */
+    border-radius: 10px; /* Menambahkan border-radius untuk tampilan yang lebih lembut */
+    padding: 10px; /* Menambahkan padding untuk kenyamanan konten dalam card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk memberikan efek 3D */
+    width: 150px; /* Lebar tetap untuk setiap card */
+    height: 200px; /* Tinggi tetap untuk setiap card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Memastikan konten berada di tengah secara vertikal */
+    align-items: center; /* Memastikan konten berada di tengah secara horizontal */
+}
+
+/* Mengatur gambar dalam card agar proporsional */
+#cuaca-harian .card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* Menjaga proporsi gambar agar tidak terdistorsi */
+}
+
+/* Gaya tombol "Lihat Selengkapnya" pada section infografis */
+#infografis .btn-outline-primary {
+    border: 2px solid #ffffff; /* Border putih */
+    color: #ffffff; /* Teks putih */
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+#infografis .btn-outline-primary:hover {
+    background-color: #ffffff; /* Background berubah menjadi putih */
+    color: #003366; /* Teks berubah menjadi warna biru tua */
+    border-color: #003366; /* Border berubah menjadi warna biru tua */
+}
+
+/* Mengubah warna background footer */
+footer {
+    background-color: #003366; /* Warna background footer sesuai permintaan */
+    color: white; /* Pastikan teks tetap terlihat di atas background baru */
+    text-align: center;
+    padding: 20px 0;
+}
